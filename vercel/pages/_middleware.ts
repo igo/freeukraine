@@ -25,11 +25,10 @@ div.style.border = "5px solid red";
 
 div.innerHTML = '${CONTENT}';
 document.getElementsByTagName("body")[0].appendChild(div);
-console.log('added', div);
 })();`;
 
 // Block Austria, prefer Germany
-const BLOCKED_COUNTRY = 'UNKNOWN'
+const BLOCKED_COUNTRY = 'RU'
 
 export function middleware(req: NextRequest) {
   const country = req.geo.country || 'UNKNOWN'
